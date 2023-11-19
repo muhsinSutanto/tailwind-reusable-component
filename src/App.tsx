@@ -6,7 +6,10 @@ function App() {
       <h1 className="mt-40">Components</h1>
       <div>
         <Button>test</Button>
-        <Button className="bg-red-500">test2 </Button>
+        <Button variant={"danger"}>test2 </Button>
+        <Button variant={"secondary"} size={"lg"}>
+          test2{" "}
+        </Button>
       </div>
     </>
   );
