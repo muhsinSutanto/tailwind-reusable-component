@@ -2,6 +2,7 @@ import { VariantProps, cva } from "class-variance-authority";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
+import cn from "../helper/utils";
 
 interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
@@ -18,7 +19,8 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={twMerge(clsx(buttonVariant({ variant, size, className })))}
+      // className={twMerge(clsx(buttonVariant({ variant, size, className })))}
+      className={cn(buttonVariant({ variant, size, className }))}
       {...props}
     >
       {children}
